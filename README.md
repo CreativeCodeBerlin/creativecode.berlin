@@ -1,8 +1,12 @@
 # creativecode.berlin
 
-> Creative Code Berlin Website
+Creative Code Berlin Website
 
-## Build Setup
+## Adding projects
+
+Add projects by modifing the *assets/projects.json*, please add your name, website url and the url of your work that will work on it's on in a webbrowser.
+
+## To run the website locally
 
 ``` bash
 # install dependencies
@@ -14,9 +18,6 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Build with Nuxt [Nuxt.js docs](https://nuxtjs.org).
