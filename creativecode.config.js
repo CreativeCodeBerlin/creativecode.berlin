@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'Creative Code Berlin',
-    script: 'npm run dev',
+    script: './node_modules/nuxt/bin/nuxt.js',
 
     instances: 1,
     autorestart: true,
