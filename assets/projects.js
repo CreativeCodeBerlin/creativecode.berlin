@@ -13,4 +13,8 @@ export default [{
   author: "Stef Tervelde",
   author_url: "https://steftervelde.nl",
   color: "white"
+}, {
+  url: "https://vimeo.com/317687371",
+  author: "Deniz Biçer",
+  color: "black"
 }]
