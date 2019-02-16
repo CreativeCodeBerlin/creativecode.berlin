@@ -49,6 +49,7 @@
 
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
 
     .credit {
       position: absolute;
