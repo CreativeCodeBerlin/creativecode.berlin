@@ -35,5 +35,10 @@
     text-decoration: none;
     border-bottom: 2px solid currentcolor;
     font-weight: bold;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateX(20px);
+    }
   }
 </style>
