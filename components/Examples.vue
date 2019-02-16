@@ -34,7 +34,6 @@
     },
     mounted() {
       var rand = Math.floor(Math.random() * this.projects.length);
-      rand = 3;
       this.setProject(rand);
     }
   }
