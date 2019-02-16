@@ -1,6 +1,6 @@
 <template>
   <div class="examples" :style="{backgroundColor: project.color}">
-    <iframe width="640" height="360" frameborder="0" :src="project.url" allowfullscreen></iframe>
+    <iframe width="640" :style="{transform: 'scale('+project.scale+')'}" height="360" frameborder="0" :src="project.url" allowfullscreen></iframe>
     <div class="credit">Made By {{this.project.author}}</div>
   </div>
 </template>
