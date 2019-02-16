@@ -4,7 +4,7 @@ Creative Code Berlin Website
 
 ## Adding projects
 
-Add projects by modifing the *assets/projects.json*, please add your name, website url and the url of your work that will work on it's on in a webbrowser.
+Add projects by modifing the *assets/projects.json*, please add your name, website url and the url of your work that will work on its own in a webbrowser.
 
 ## To run the website locally
 
