@@ -17,6 +17,9 @@
         <CCButton href="http://chat.creativecode.berlin">
           Chat
         </CCButton>
+        <CCButton href="https://github.com/Stefterv/creativecode.berlin">
+          Website repo
+        </CCButton>
       </section>
       <section>
         <h2>Next up</h2>
