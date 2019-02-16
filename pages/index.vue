@@ -70,6 +70,7 @@
         document.querySelector(".section-items").style.backgroundColor = color;
         document.querySelector(".section-items").style.boxShadow = "0 0 200px 100px " + color;
         document.querySelector(".title").style.textShadow = "2px 2px 0 " + color;
+        document.querySelector("body").style.backgroundColor = color;
       }
     },
     mounted() {

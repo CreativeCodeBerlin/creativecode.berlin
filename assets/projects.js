@@ -14,7 +14,9 @@ export default [{
   author_url: "https://steftervelde.nl",
   color: "white"
 }, {
-  url: "https://vimeo.com/317687371",
+
+  url: "https://player.vimeo.com/video/317687371?autoplay=true&loop=true&muted=true",
   author: "Deniz Biçer",
+  author_url: "",
   color: "black"
 }]
