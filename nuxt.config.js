@@ -25,7 +25,14 @@ module.exports = {
     link: [{
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
+        href: '/favicon.png'
+      }, {
+        href: "favicon.png",
+        rel: "shortcut icon",
+        type: "image/x-icon"
+      }, {
+        href: "/logo.png",
+        rel: "apple-touch-icon"
       },
       {
         rel: "stylesheet",
