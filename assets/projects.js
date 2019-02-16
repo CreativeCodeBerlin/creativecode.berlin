@@ -3,7 +3,7 @@ export default [{
   author: "Kazik",
   author_url: "",
   color: "black",
-  scale: 1.05
+  scale: 1.25
 }, {
   url: "https://www.shadertoy.com/embed/3slGRH?gui=false&t=10&paused=false&muted=true",
   author: "Kazik",
