@@ -1,7 +1,7 @@
 <template>
   <div class="examples" :style="{backgroundColor: project.color}">
     <iframe width="640" height="360" frameborder="0" :src="project.url" allowfullscreen></iframe>
-    <div class="credit">Made By {{this.project.author}}</div>
+    <div class="credit">Made By <a :href="project.author_url">{{this.project.author}}</a></div>
   </div>
 </template>
 <script>
