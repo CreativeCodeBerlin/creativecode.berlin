@@ -22,7 +22,7 @@
     know when physical events resume on our
     <a href="https://twitter.com/creativecodeBLN">Twitter</a> account,
     <a href="http://chat.creativecode.berlin">Mattermost</a> chat, and
-    <a href="http://newsletter.creativecode.berlin">Newsletter</a
+    <a href="https://forms.gle/GvaABURPZ7e5a62i9">Newsletter</a
     >.<br /><br />Stay safe, stay strong, wash your hands, call your loved ones
     ❤️<br />– The Creative Code Berlin Team<br /><br />Read Co.Up's official
     announcement here:<br />
