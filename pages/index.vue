@@ -8,11 +8,11 @@
     <div class="section-items">
       <section>
         <h2>Links</h2>
-        <CCButton href="https://forms.gle/GvaABURPZ7e5a62i9">
-          Newsletter
-        </CCButton>
         <CCButton href="http://stammtisch.creativecode.berlin">
           Stammtisch Doc
+        </CCButton>
+        <CCButton href="https://creativecodeberlin.github.io/Stammtisch/">
+          Stammtisch Log
         </CCButton>
         <CCButton href="http://jam.creativecode.berlin">
           Jam Doc
