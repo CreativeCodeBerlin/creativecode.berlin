@@ -1,5 +1,7 @@
 const pkg = require("./package");
 
+import redirects from "./assets/redirect";
+
 export default {
   ssr: false,
   head: {
@@ -53,5 +55,8 @@ export default {
         "postcss-nested": {}
       }
     }
+  },
+  generate: {
+    routes: redirects.map(link => link.path)
   }
 };
