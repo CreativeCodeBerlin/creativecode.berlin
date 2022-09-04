@@ -1,5 +1,10 @@
 export default [
   {
+    title: "Meetup",
+    path: "/meetup",
+    target: "https://www.meetup.com/creativecodeberlin/"
+  },
+  {
     title: "Stammtisch Pad",
     path: "/ccs",
     target: "https://funprogramming.org/pad/p/ccs"
