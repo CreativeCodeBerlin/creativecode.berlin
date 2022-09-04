@@ -4,19 +4,19 @@
   </a>
 </template>
 
-<style lang="scss" scoped>
-  .button {
-    background: $maincolor;
-    display: block;
-    color: white;
-    padding: 12px;
-    margin: 12px auto;
-    text-align: center;
-    max-width: 250px;
-  }
+<style lang="postcss" scoped>
+.button {
+  background: var(--maincolor);
+  display: block;
+  color: white;
+  padding: 12px;
+  margin: 12px auto;
+  text-align: center;
+  max-width: 250px;
+}
 </style>
 <script>
-  export default {
-    props: ['href']
-  }
+export default {
+  props: ["href"]
+};
 </script>

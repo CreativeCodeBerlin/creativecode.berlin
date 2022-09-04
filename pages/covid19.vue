@@ -38,7 +38,7 @@
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
 aside {
   font-weight: normal;
   font-style: italic;

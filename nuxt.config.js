@@ -1,107 +1,57 @@
-const pkg = require('./package')
+const pkg = require("./package");
 
-
-module.exports = {
-  mode: 'universal',
-
-  /*
-   ** Headers of the page
-   */
+export default {
+  mode: "spa",
   head: {
     title: pkg.name,
-    meta: [{
-        charset: 'utf-8'
+    meta: [
+      {
+        charset: "utf-8"
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
       {
-        hid: 'description',
-        name: 'description',
+        hid: "description",
+        name: "description",
         content: pkg.description
       }
     ],
-    link: [{
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.png'
-      }, {
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.png"
+      },
+      {
         href: "favicon.png",
         rel: "shortcut icon",
         type: "image/x-icon"
-      }, {
+      },
+      {
         href: "/logo.png",
         rel: "apple-touch-icon"
       },
       {
         rel: "stylesheet",
-        href: 'https://use.typekit.net/cpf6ngv.css'
+        href: "https://use.typekit.net/cpf6ngv.css"
       }
     ]
   },
-
-  /*
-   ** Customize the progress-bar color
-   */
   loading: {
-    color: '#fff'
+    color: "#fff"
   },
-
-  /*
-   ** Global CSS
-   */
-  css: [],
-
-
-
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
-
-
-  serverMiddleware: [],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    '@nuxtjs/style-resources',
-    '@nuxtjs/proxy',
-  ],
-  styleResources: {
-    scss: [
-      'assets/main.scss',
-    ]
+  router: {
+    // ran before every route on both client and server
+    middleware: ["redirect"]
   },
-
-  proxy: {
-    '/meetup': {
-      target: 'http://api.meetup.com',
-      pathRewrite: {
-        '^/meetup': '/'
-      }
-    }
-  },
-  /*
-   ** Axios module configuration
-   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-    proxy: true
-  },
-
-  /*
-   ** Build configuration
-   */
+  css: ["@/assets/main.pcss"],
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-
+    postcss: {
+      plugins: {
+        "postcss-nested": {}
+      }
     }
   }
-}
+};
