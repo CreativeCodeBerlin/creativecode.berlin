@@ -12,20 +12,8 @@
     <div class="section-items">
       <section>
         <h2>Links</h2>
-        <CCButton href="https://funprogramming.org/pad/p/ccs">
-          Stammtisch Doc
-        </CCButton>
-        <CCButton href="https://creativecodeberlin.github.io/Stammtisch/">
-          Stammtisch Log
-        </CCButton>
-        <CCButton href="https://funprogramming.org/pad/p/ccjam">
-          Jam Doc
-        </CCButton>
-        <CCButton href="http://chat.creativecode.berlin">
-          Chat
-        </CCButton>
-        <CCButton href="https://github.com/Stefterv/creativecode.berlin">
-          Website repo
+        <CCButton v-for="link in redirects" :key="link.path" :href="link.path">
+          {{ link.title }}<span>{{ link.path }}</span>
         </CCButton>
       </section>
     </div>
@@ -34,10 +22,12 @@
 <script>
 import CCButton from "~/components/CCButton";
 import Examples from "~/components/Examples";
+import redirects from "~/assets/redirect";
+
 export default {
   data() {
     return {
-      meetup: []
+      redirects
     };
   },
   head: {
