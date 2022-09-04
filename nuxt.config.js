@@ -1,7 +1,7 @@
 const pkg = require("./package");
 
 export default {
-  mode: "spa",
+  ssr: false,
   head: {
     title: pkg.name,
     meta: [

@@ -15,6 +15,7 @@
     "postcss": "^7.0.39"
   },
   "devDependencies": {
+    "consola": "^2.15.3",
     "postcss-nested": "^4.2.3"
   }
 }
