@@ -1,8 +1,8 @@
 {
   "name": "creativecode.berlin",
   "version": "1.0.0",
-  "description": "Creative Code Berlin Website",
-  "author": "Stef Tervelde",
+  "description": "Art and technology community. Two meetups a month’s since 2012. Stammtisch every first Friday of the month. Jam every third Saturday. Art and technology community. Two meetups a month’s since 2012. Stammtisch every first Friday of the month. Jam every third Saturday.",
+  "author": "Creative Code Berlin Hosts",
   "private": true,
   "scripts": {
     "dev": "nuxt",
