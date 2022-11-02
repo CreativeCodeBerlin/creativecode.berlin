@@ -8,55 +8,65 @@ export default {
     title: pkg.name,
     meta: [
       {
-        charset: "utf-8"
+        charset: "utf-8",
       },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1"
+        content: "width=device-width, initial-scale=1",
       },
       {
         hid: "description",
         name: "description",
-        content: pkg.description
-      }
+        content: pkg.description,
+      },
     ],
+
     link: [
       {
         rel: "icon",
         type: "image/x-icon",
-        href: "/favicon.png"
+        href: "/favicon.png",
       },
       {
         href: "favicon.png",
         rel: "shortcut icon",
-        type: "image/x-icon"
+        type: "image/x-icon",
       },
       {
         href: "/logo.png",
-        rel: "apple-touch-icon"
+        rel: "apple-touch-icon",
       },
       {
         rel: "stylesheet",
-        href: "https://use.typekit.net/cpf6ngv.css"
-      }
-    ]
+        href: "https://use.typekit.net/cpf6ngv.css",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Comfortaa&display=swap",
+        crossorigin: "",
+      },
+    ],
   },
   loading: {
-    color: "#fff"
+    color: "#fff",
   },
   router: {
     // ran before every route on both client and server
-    middleware: ["redirect"]
+    middleware: ["redirect"],
   },
   css: ["@/assets/main.pcss"],
   build: {
     postcss: {
       plugins: {
-        "postcss-nested": {}
-      }
-    }
+        "postcss-nested": {},
+      },
+    },
   },
   generate: {
-    routes: redirects.map(link => link.path)
-  }
+    routes: redirects.map((link) => link.path),
+  },
 };

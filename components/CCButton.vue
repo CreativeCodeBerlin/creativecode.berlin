@@ -7,8 +7,6 @@
 <style lang="postcss" scoped>
 .button {
   background: var(--maincolor);
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   color: white;
   padding: 12px;
@@ -28,6 +26,6 @@
 </style>
 <script>
 export default {
-  props: ["href"]
+  props: ["href"],
 };
 </script>

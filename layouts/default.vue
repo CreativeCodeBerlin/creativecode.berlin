@@ -6,8 +6,9 @@
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Comfortaa", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
-  font-family: ocr-b-std, monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
