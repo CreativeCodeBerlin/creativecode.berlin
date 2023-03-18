@@ -49,4 +49,10 @@ export default [
     path: "/github",
     target: "https://github.com/CreativeCodeBerlin",
   },
+  {
+    title: "Learn",
+    path: "/learn",
+    target:
+      "https://sableraph.notion.site/Creative-Code-resources-for-beginners-and-beyond-p5-js-edition-38fce7d30b1d41a9a626ab70440f40ca",
+  },
 ];
