@@ -1,11 +1,10 @@
-const pkg = require("./package");
-
 import redirects from "./assets/redirect";
 
 export default {
+  buildModules: ["@nuxt/postcss8"],
   ssr: false,
   head: {
-    title: pkg.name,
+    title: "Creative Code Berlin",
     meta: [
       {
         charset: "utf-8",
@@ -17,7 +16,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: pkg.description,
+        content: "",
       },
     ],
 
@@ -66,6 +65,7 @@ export default {
       },
     },
   },
+
   generate: {
     routes: redirects.map((link) => link.path),
   },
