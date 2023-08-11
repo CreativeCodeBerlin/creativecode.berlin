@@ -81,6 +81,10 @@ onMounted(() => {
 useHead(() => ({
   htmlAttrs: {
     class: project.value.color
+  },
+  title: "Creative Code Berlin",
+  meta: {
+    description: "High speed collisions at the intersection or art and technology. Two meetups a month’s since 2012. See you at the next one? Bleep bloop!"
   }
 }))
 </script>
@@ -195,7 +199,7 @@ header{
     margin: var(--pad) 0;
     padding: var(--pad) var(--pad2);
     color: white;
-    border-radius: 12px;
+    border-radius: 2px;
     transition: 0.2s ease-in-out;
     aside{
       font-size: 0.8em;
