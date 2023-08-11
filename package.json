@@ -1,23 +1,16 @@
 {
-  "name": "creativecode.berlin",
-  "version": "1.0.0",
-  "description": "Art and technology community. Two meetups a month’s since 2012. Stammtisch every first Friday of the month. Jam every third Saturday. Art and technology community. Two meetups a month’s since 2012. Stammtisch every first Friday of the month. Jam every third Saturday.",
-  "author": "Creative Code Berlin Hosts",
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
-  "dependencies": {
-    "nuxt": "^2.15.0"
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "postcss": "^8.4.21",
-    "postcss-nested": "^4.2.3",
-    "sass": "^1.65.1",
-    "sass-loader": "^10.4.1",
-    "webpack": "^4.46.0"
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.17.3",
+    "nuxt": "^3.6.5"
   }
 }
