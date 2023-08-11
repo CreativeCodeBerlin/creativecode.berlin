@@ -165,6 +165,9 @@ header{
     margin: 0 auto;
     fill: var(--primary);
     animation: pop-in 0.35s 1;
+    .white &{
+      filter: invert(1);
+    }
   }
   h1{
     font-size: 0em;
