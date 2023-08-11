@@ -34,7 +34,7 @@
   </main>
 </template>
 <script>
-import CCButton from "~/components/CCButton";
+import LinkButton from "~/components/LinkButton";
 import Examples from "~/components/Examples";
 import redirects from "~/assets/redirect";
 
@@ -42,68 +42,83 @@ export default {
   data() {
     return {
       redirects,
+      color: "black"
     };
   },
   head: {
     title: "Creative Code Berlin",
   },
   components: {
-    CCButton,
+    CCButton: LinkButton,
     Examples,
   },
   methods: {
     setColor(color) {
-      if (process.server) return;
-      console.log("Color: ", color);
-      document.querySelector(".section-items").style.backgroundColor = color;
-      document.querySelector(".section-items").style.boxShadow =
-        "0 0 200px 100px " + color;
-      document.querySelector(".title").style.textShadow = "2px 2px 0 " + color;
-      document.querySelector("body").style.backgroundColor = color;
+      this.color = color;
+      // if (process.server) return;
+      // console.log("Color: ", color);
+      // document.querySelector(".section-items").style.backgroundColor = color;
+      // document.querySelector(".section-items").style.boxShadow =
+      //   "0 0 200px 100px " + color;
+      // document.querySelector(".title").style.textShadow = "2px 2px 0 " + color;
+      // document.querySelector("body").style.backgroundColor = color;
     },
   },
 };
 </script>
 
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 main {
   display: flex;
   flex-wrap: wrap;
 }
-
-.title {
-  font-size: 2.8em;
-  text-align: left;
-  display: inline-block;
-  animation: pop-in 0.35s 1;
-  color: var(--maincolor);
-  text-shadow: 2px 2px 0 rgba(black, 1);
-  transition: text-shadow 0.5s;
-
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: -15vh;
   @media (min-width: 650px) {
-    font-size: 8em;
+    width: auto;
   }
-  svg {
-    width: 25vw;
-    height: 25vw;
-    path {
-      fill: var(--maincolor);
+
+  .shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    //background: linear-gradient(0deg, rgba(black, 1) 0%, rgba(black, 0) 100%);
+    transition: background 0.5s;
+  }
+
+  .title {
+    display: inline-block;
+    animation: pop-in 0.35s 1;
+    color: var(--maincolor);
+
+    svg {
+      width: 80vw;
+      height: 80vw;
+      mix-blend-mode: difference;
+      @media (min-width: 650px) {
+        width: 25vw;
+        height: 25vw;
+      }
+      path {
+        fill: var(--maincolor);
+      }
     }
   }
 }
 
 .section-items {
-  display: flex;
-  flex-wrap: wrap;
-  background: black;
-  transition: background 0.5s;
-  max-width: 700px;
-  margin: 0 auto;
-  align-self: center;
-
-  section {
-    flex: 1 1 350px;
-  }
+  padding: var(--pad);
   h2 {
     text-transform: uppercase;
   }
@@ -123,25 +138,7 @@ main {
   }
 }
 
-header {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  position: relative;
 
-  .shadow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    //background: linear-gradient(0deg, rgba(black, 1) 0%, rgba(black, 0) 100%);
-    transition: background 0.5s;
-  }
-}
 
 section {
   padding: 0 12px;
