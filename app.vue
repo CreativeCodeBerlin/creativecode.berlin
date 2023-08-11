@@ -212,6 +212,9 @@ header{
     &:hover {
       transform: translateX(10px);
       mix-blend-mode: difference;
+      .white &{
+        filter: invert(1);
+      }
     }
   }
 }
