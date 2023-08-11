@@ -16,15 +16,15 @@ export default [
   {
     url: "https://editor.p5js.org/stefterv/present/HJOMFD6T7",
     author: "Stef Tervelde",
-    author_url: "https://steftervelde.nl",
+    author_url: "https://steftervel.de",
     color: "white",
   },
   {
-    url: "https://player.vimeo.com/video/317687371?autoplay=true&loop=true&muted=true",
+    url: "https://player.vimeo.com/video/317687371?autoplay=true&loop=true&muted=true&title=0&byline=0&portrait=0&sidedock=0",
     author: "Deniz Biçer",
     author_url: "",
     color: "black",
-    scale: 1.75,
+    scale: 1.85,
   },
   {
     url: "https://openprocessing.org/sketch/886902/embed/",
