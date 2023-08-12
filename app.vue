@@ -161,6 +161,7 @@ header{
     mix-blend-mode: difference;
     width: 50vw;
     height: 50vw;
+    max-width: 400px;
     flex: 1 1 auto;
     margin: 0 auto;
     fill: var(--primary);
