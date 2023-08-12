@@ -49,7 +49,7 @@
                 <label for="result">Result</label>
                 <textarea id="result" cols="20" rows="20">{{ project }}</textarea>
                 <details>
-                    Copy this code and email it to <a href="mailto:team@creativecode.berlin">team@creativecode.berlin</a> or message one of the moderators on the <a href="/discord">discord</a>.
+                    Copy this code and email it to <a href="mailto:team@creativecode.berlin">team@creativecode.berlin</a> or message one of the moderators on the <a href="https://creativecode.berlin/discord">discord</a>.
                 </details>
             </div>
         </form>
