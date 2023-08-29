@@ -1,23 +1,63 @@
-# creativecode.berlin
+# Nuxt 3 Minimal Starter
 
-Creative Code Berlin Website
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Adding projects
+## Setup
 
-Add projects by modifing the *assets/projects.json*, please add your name, website url and the url of your work that will work on its own in a webbrowser.
+Make sure to install the dependencies:
 
-## To run the website locally
+```bash
+# npm
+npm install
 
-``` bash
-# install dependencies
-$ npm install
+# pnpm
+pnpm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
+# yarn
+yarn install
 ```
 
-Build with Nuxt [Nuxt.js docs](https://nuxtjs.org).
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
