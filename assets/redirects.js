@@ -60,4 +60,9 @@ export default [
     path: "/codeofconduct",
     target: "https://berlincodeofconduct.org",
   },
+  {
+    title: "Submit your artwork",
+    path: "/submit",
+    target: "https://creativecode.berlin/submit",
+  },
 ];
