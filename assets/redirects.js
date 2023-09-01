@@ -62,7 +62,7 @@ export default [
   },
   {
     title: "Submit your artwork",
-    path: "/submit",
-    target: "https://creativecode.berlin/submit",
+    path: "/artwork",
+    target: "https://creativecode.berlin/submit/",
   },
 ];
