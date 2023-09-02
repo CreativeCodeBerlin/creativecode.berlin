@@ -33,4 +33,11 @@ export default [
     color: "white",
     scale: 1.75,
   },
+  {
+    "url": "https://www.shadertoy.com/embed/lt2BDG?gui=false&paused=false&muted=false",
+    "author": "aBe",
+    "author_url": "https://hamoid.com",
+    "color": "black",
+    "scale": "1"
+  }
 ];
