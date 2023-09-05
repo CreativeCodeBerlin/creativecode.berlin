@@ -53,7 +53,7 @@ const projectIndex = useCookie('projectIndex', {
 onMounted(() => {
   projectIndex.value += 1
   projectIndex.value %= projects.length
-  project = projects[projectIndex.value]
+  project.value = projects[projectIndex.value]
 })
 
 const project = ref(projects[projectIndex.value])
