@@ -47,15 +47,16 @@
 import projects from 'assets/projects';
 import redirects from 'assets/redirects';
 
-const project = ref(projects[0])
-function randomProject(){
-  project.value = projects[Math.floor(Math.random() * projects.length)]
-}
-provide('project', project)
-
-onMounted(() => {
-  randomProject()
+const projectIndex = useCookie('projectIndex', {
+  default: () => Math.floor(Math.random() * projects.length),
 })
+onMounted(() => {
+  projectIndex.value += 1
+  projectIndex.value %= projects.length
+})
+
+const project = ref(projects[projectIndex.value])
+provide('project', project)
 
 const route = useRoute()
 onMounted(() => {
