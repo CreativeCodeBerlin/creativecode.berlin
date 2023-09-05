@@ -40,6 +40,7 @@ export default [
     "color": "black",
     "scale": "1"
   },
+  {
     "url": "https://cables.gl/view/y2j30p",
     "author": "action-io",
     "author_url": "http://action-io.com/",
