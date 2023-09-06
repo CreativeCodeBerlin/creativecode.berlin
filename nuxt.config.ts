@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   hooks: {
     "build:done"() {
         const file = redirects.map((redirect) => {
-          return `${redirect.path}/ ${redirect.target} 200`;
+          return `${redirect.path} ${redirect.target} 200`;
         }).join("\n");
 
         fs.writeFileSync("public/_redirects",file);
