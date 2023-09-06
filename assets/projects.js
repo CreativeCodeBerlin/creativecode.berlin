@@ -14,10 +14,11 @@ export default [
     scale: 1.05,
   },
   {
-    url: "https://editor.p5js.org/stefterv/present/HJOMFD6T7",
+    url: "https://ecstatic-ardinghelli-97b5f7.netlify.app",
     author: "Stef Tervelde",
     author_url: "https://steftervel.de",
-    color: "white",
+    color: "black",
+    scale: 1,
   },
   {
     url: "https://player.vimeo.com/video/317687371?autoplay=true&loop=true&muted=true&title=0&byline=0&portrait=0&sidedock=0",
@@ -34,17 +35,17 @@ export default [
     scale: 1.75,
   },
   {
-    "url": "https://www.shadertoy.com/embed/lt2BDG?gui=false&paused=false&muted=false",
-    "author": "aBe",
-    "author_url": "https://hamoid.com",
-    "color": "black",
-    "scale": "1"
+    url: "https://www.shadertoy.com/embed/lt2BDG?gui=false&paused=false&muted=false",
+    author: "aBe",
+    author_url: "https://hamoid.com",
+    color: "black",
+    scale: "1",
   },
   {
-    "url": "https://cables.gl/view/y2j30p",
-    "author": "action-io",
-    "author_url": "http://action-io.com/",
-    "color": "black",
-    "scale": "1"
-  }
+    url: "https://cables.gl/view/y2j30p",
+    author: "action-io",
+    author_url: "http://action-io.com/",
+    color: "black",
+    scale: "1",
+  },
 ];
