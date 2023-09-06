@@ -2,16 +2,9 @@ export default [
   {
     url: "https://www.shadertoy.com/embed/wsB3Rt?gui=false&t=10&paused=false&muted=true",
     author: "Kazik",
-    author_url: "",
+    author_url: "https://xemantic.com/",
     color: "black",
     scale: 1.25,
-  },
-  {
-    url: "https://www.shadertoy.com/embed/3slGRH?gui=false&t=10&paused=false&muted=true",
-    author: "Kazik",
-    author_url: "",
-    color: "black",
-    scale: 1.05,
   },
   {
     url: "https://ecstatic-ardinghelli-97b5f7.netlify.app",
@@ -23,14 +16,14 @@ export default [
   {
     url: "https://player.vimeo.com/video/317687371?autoplay=true&loop=true&muted=true&title=0&byline=0&portrait=0&sidedock=0",
     author: "Deniz Biçer",
-    author_url: "",
+    author_url: "https://instagram.com/ojelibalon",
     color: "black",
     scale: 1.85,
   },
   {
     url: "https://openprocessing.org/sketch/886902/embed/",
     author: "Boy d'Hont",
-    author_url: "",
+    author_url: "https://bdhont.net/",
     color: "white",
     scale: 1.75,
   },
@@ -49,9 +42,16 @@ export default [
     scale: "1",
   },
   {
+    url: "https://www.shadertoy.com/embed/3slGRH?gui=false&t=10&paused=false&muted=true",
+    author: "Kazik",
+    author_url: "https://xemantic.com/",
+    color: "black",
+    scale: 1.05,
+  },
+  {
     url: "https://adoring-saha-7bbd3b.netlify.app/",
     author: "Stef Tervelde",
-    author_url: "",
+    author_url: "https://steftervel.de",
     color: "black",
     scale: "1",
   },
