@@ -48,4 +48,11 @@ export default [
     color: "black",
     scale: "1",
   },
+  {
+    url: "https://adoring-saha-7bbd3b.netlify.app/",
+    author: "Stef Tervelde",
+    author_url: "",
+    color: "black",
+    scale: "1",
+  },
 ];
