@@ -45,6 +45,11 @@ export default [
     target: "https://www.instagram.com/creativecodebln/",
   },
   {
+    title: "Submit your artwork",
+    path: "/artwork",
+    target: "https://creativecode.berlin/submit/",
+  },
+  {
     title: "Github",
     path: "/github",
     target: "https://github.com/CreativeCodeBerlin",
@@ -59,10 +64,5 @@ export default [
     title: "Code Of Conduct",
     path: "/codeofconduct",
     target: "https://berlincodeofconduct.org",
-  },
-  {
-    title: "Submit your artwork",
-    path: "/artwork",
-    target: "https://creativecode.berlin/submit/",
   },
 ];
