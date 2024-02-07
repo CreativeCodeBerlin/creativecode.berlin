@@ -81,6 +81,7 @@ watch([url, author, author_url, color, scale], () => {
 <style lang="scss" scoped>
 .submit{
     padding: var(--pad2);
+    max-width: 200px;
     label{
         display: block;
     }
