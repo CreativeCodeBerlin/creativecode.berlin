@@ -10,6 +10,11 @@ export default [
     target: "https://funprogramming.org/pad/p/ccs",
   },
   {
+    title: "Stammtisch Pad (BETA)",
+    path: "/ccs2",
+    target: "https://files.creativecode.berlin/s/fZaqsM25kroFfzz",
+  },
+  {
     title: "Stammtisch Archive",
     path: "/archive",
     target: "https://creativecodeberlin.github.io/Stammtisch/",
