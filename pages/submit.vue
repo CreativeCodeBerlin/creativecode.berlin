@@ -6,9 +6,11 @@
             <div>
                 <h2>How to submit</h2>
                 <p>
-                    Copy the <a href="#result">code</a> below and email it to <a
-                        href="mailto:team@creativecode.berlin">team@creativecode.berlin</a> or
-                    message one of the moderators on the <a href="https://creativecode.berlin/discord">discord</a>.
+                    <a
+                        :href="`mailto:team@creativecode.berlin?subject=Website%20Submission&body=${encodeURIComponent(JSON.stringify(project))}`">Click
+                        here to submit</a> or
+                    copy the <a href="#result">code</a> below and email it to <a
+                        href="mailto:team@creativecode.berlin">team@creativecode.berlin</a>.
                 </p>
 
                 <label for="url">Artwork URL</label>
@@ -83,6 +85,8 @@ watch([url, author, author_url, color, scale], () => {
         scale: scale.value
     }
 })
+
+
 
 
 </script>
