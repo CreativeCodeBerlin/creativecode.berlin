@@ -2,31 +2,40 @@
     <section class="submit">
         <form>
             <h2>Submit</h2>
-            
+
             <div>
+                <h2>How to submit</h2>
+                <p>
+                    Copy the <a href="#result">code</a> below and email it to <a
+                        href="mailto:team@creativecode.berlin">team@creativecode.berlin</a> or
+                    message one of the moderators on the <a href="https://creativecode.berlin/discord">discord</a>.
+                </p>
+
                 <label for="url">Artwork URL</label>
                 <input type="text" id="url" name="url" v-model="url" placeholder="URL" />
-                <details>
-                    The artwork needs to be hosted by you. For images in can be on your own website, or on a service like <a href="https://imgur.com">Imgur</a>.
-                    For video it can be on your own website, or on a service like <a href="https://vimeo.com">Vimeo</a> or <a href="https://youtube.com">Youtube</a>.
-                    Generate an embed code and paste the URL from the src attribute here.
-                </details>
+
+                <p>
+                    The artwork needs to be hosted by you.<br>
+                    For images in can be on your own website, or on a service like <a
+                        href="https://imgur.com">Imgur</a>.<br>
+                    For websites you could use a service like <a href="https://www.netlify.com/">Netlify</a>.
+                    For video it can be on your own website, or on a service like <a href="https://vimeo.com">Vimeo</a> or
+                    <a href="https://youtube.com">Youtube</a>.<br>
+                    Tip: When generating an embed code with an iFrame tag, use the url from the src attribute.
+
+                </p>
             </div>
 
             <div>
                 <label for="author">Author Name</label>
                 <input type="text" id="author" name="author" v-model="author" placeholder="Author" />
-                <details>
-                    Your name / the author of the artwork.
-                </details>
+                <p>Your name / the author of the artwork.</p>
             </div>
 
             <div>
                 <label for="author_url">Author URL</label>
                 <input type="text" id="author_url" name="author_url" v-model="author_url" placeholder="Author URL" />
-                <details>
-                    Your website / the author's website.
-                </details>
+                <p>Your website / the author's website.</p>
             </div>
 
             <div>
@@ -39,18 +48,18 @@
 
             <div>
                 <label for="scale">Scale</label>
-                <input type="range" max="1.5" min="0.5" step="0.01" id="scale" name="scale" v-model="scale" placeholder="Author URL" />{{ scale  }}
-                <details>
-                    The scale of the artwork. 1 is 100%. This is so you can hide any elements you don't want to show from the embed like video controls or page headers.
-                </details>
+                <input type="range" max="1.5" min="0.5" step="0.01" id="scale" name="scale" v-model="scale" />
+                <p>
+                    The scale of the artwork. This is so you can hide any elements you don't want to show from
+                    the embed like video controls or page headers.
+                </p>
             </div>
-            
+
             <div>
-                <label for="result">Result</label>
-                <textarea id="result" cols="20" rows="20">{{ project }}</textarea>
-                <details>
-                    Copy this code and email it to <a href="mailto:team@creativecode.berlin">team@creativecode.berlin</a> or message one of the moderators on the <a href="https://creativecode.berlin/discord">discord</a>.
-                </details>
+                <label for="result">The code to send to us</label>
+                <textarea id="result" cols="30" rows="8">{{ project }}</textarea>
+
+
             </div>
         </form>
     </section>
@@ -79,11 +88,40 @@ watch([url, author, author_url, color, scale], () => {
 </script>
 
 <style lang="scss" scoped>
-.submit{
+.submit {
+
     padding: var(--pad2);
-    max-width: 200px;
-    label{
+    padding-top: calc(var(--pad2) * 2);
+    min-width: 400px;
+    position: absolute;
+
+    label {
         display: block;
     }
+
+    p {
+        max-width: 400px;
+    }
+}
+
+label {
+    margin-top: var(--pad);
+
+}
+
+input,
+select {
+    width: 100%;
+    padding: var(--pad);
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 100%;
+
+}
+
+h2 {
+    margin-top: var(--pad2);
 }
 </style>

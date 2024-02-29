@@ -7,16 +7,16 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/google-fonts"],
   googleFonts: {
     families: {
-      Comfortaa: true,
+      Comfortaa: [400, 700],
     },
   },
   hooks: {
     "build:done"() {
-        const file = redirects.map((redirect) => {
-          return `${redirect.path} ${redirect.target} 301`;
-        }).join("\n");
+      const file = redirects.map((redirect) => {
+        return `${redirect.path} ${redirect.target} 301`;
+      }).join("\n");
 
-        fs.writeFileSync("public/_redirects",file);
-      },
-    }
+      fs.writeFileSync("public/_redirects", file);
+    },
+  }
 });
