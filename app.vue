@@ -48,7 +48,7 @@ provide('project', project)
 
 const route = useRoute()
 onMounted(() => {
-  let redirect = redirects.find(r => r.path === route.path)
+  let redirect = redirects.filter(redirect => !redirect.page).find(r => r.path === route.path)
   if (!redirect) return
   window.location.href = redirect.target
 })
