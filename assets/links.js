@@ -51,8 +51,8 @@ export default [
   },
   {
     title: "Submit your artwork",
-    path: "/artwork",
-    target: "https://creativecode.berlin/submit/",
+    path: "/submit",
+    page: true,
   },
   {
     title: "Github",
@@ -72,7 +72,7 @@ export default [
   },
   {
     title: "Grievance policy",
-    path: "/grievancePolicy",
-    target: "https://creativecode.berlin/grievancePolicy/",
+    path: "/grievancepolicy",
+    page: true,
   },
 ];

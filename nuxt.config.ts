@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import redirects from "./assets/redirects";
+import redirects from "./assets/links";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
