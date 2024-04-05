@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   },
   hooks: {
     "build:done"() {
-      const file = redirects.map((redirect) => {
+      const file = redirects.filter(redirect => !redirect.page).map((redirect) => {
         return `${redirect.path} ${redirect.target} 301`;
       }).join("\n");
 
