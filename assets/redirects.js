@@ -70,4 +70,9 @@ export default [
     path: "/codeofconduct",
     target: "https://berlincodeofconduct.org",
   },
+  {
+    title: "Grievance policy",
+    path: "/grievancePolicy",
+    target: "https://creativecode.berlin/grievancePolicy/",
+  },
 ];
