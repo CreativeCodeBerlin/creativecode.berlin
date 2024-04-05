@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import redirects from "./assets/redirects";
+import redirects from "./assets/links";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   },
   hooks: {
     "build:done"() {
-      const file = redirects.map((redirect) => {
+      const file = redirects.filter(redirect => !redirect.page).map((redirect) => {
         return `${redirect.path} ${redirect.target} 301`;
       }).join("\n");
 
