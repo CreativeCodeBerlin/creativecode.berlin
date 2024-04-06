@@ -32,23 +32,26 @@
 
 <script setup>
 import projects from 'assets/projects';
-import redirects from 'assets/links';
+import links from 'assets/links';
 
 const projectIndex = useCookie('projectIndex', {
   default: () => Math.floor(Math.random() * projects.length),
 })
+
+
+const project = ref(projects[projectIndex.value])
+provide('project', project)
 onMounted(() => {
   projectIndex.value += 1
   projectIndex.value %= projects.length
   project.value = projects[projectIndex.value]
 })
 
-const project = ref(projects[projectIndex.value])
-provide('project', project)
-
 const route = useRoute()
 onMounted(() => {
-  let redirect = redirects.filter(redirect => !redirect.page).find(r => r.path === route.path)
+  let redirect = links
+    .filter(link => !link.page)
+    .find(link => link.path === route.path)
   if (!redirect) return
   window.location.href = redirect.target
 })

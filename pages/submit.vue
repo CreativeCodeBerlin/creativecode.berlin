@@ -21,7 +21,8 @@
                     For images in can be on your own website, or on a service like <a
                         href="https://imgur.com">Imgur</a>.<br>
                     For websites you could use a service like <a href="https://www.netlify.com/">Netlify</a>.
-                    For video it can be on your own website, or on a service like <a href="https://vimeo.com">Vimeo</a> or
+                    For video it can be on your own website, or on a service like <a href="https://vimeo.com">Vimeo</a>
+                    or
                     <a href="https://youtube.com">Youtube</a>.<br>
                     Tip: When generating an embed code with an iFrame tag, use the url from the src attribute.
 
@@ -93,10 +94,15 @@ watch([url, author, author_url, color, scale], () => {
 
 <style lang="scss" scoped>
 .submit {
+    background: var(--background);
 
     padding: var(--pad2);
     padding-top: calc(var(--pad2) * 2);
-    min-width: 400px;
+
+    @media screen and (min-width: 800px) {
+        min-width: 400px;
+    }
+
     position: absolute;
 
     label {
@@ -118,6 +124,7 @@ select {
     width: 100%;
     padding: var(--pad);
     font-size: 1.2em;
+    box-sizing: border-box;
 }
 
 textarea {

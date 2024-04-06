@@ -2,30 +2,20 @@
   <section class="links">
     <h2>Links</h2>
     <ul>
-      <template v-for="redirect in redirects" :key="redirect.path">
-        <template v-if="redirect.page">
-          <NuxtLink :to="redirect.path">
-            <li class="redirect">
-              <main>{{ redirect.title }}</main>
-              <aside>{{ redirect.path }} </aside>
-            </li>
-          </NuxtLink>
-        </template>
-        <template v-else>
-          <a :href="redirect.target">
-            <li class="redirect">
-              <main>{{ redirect.title }}</main>
-              <aside>{{ redirect.path }} </aside>
-            </li>
-          </a>
-        </template>
+      <template v-for="{ page, path, target, title } in links" :key="path">
+        <NuxtLink :to="page ? path : target">
+          <li class="redirect">
+            <main>{{ title }}</main>
+            <aside>{{ path }} </aside>
+          </li>
+        </NuxtLink>
       </template>
     </ul>
   </section>
 </template>
 
 <script setup>
-import redirects from 'assets/links';
+import links from 'assets/links';
 
 </script>
 
@@ -40,6 +30,7 @@ import redirects from 'assets/links';
     color: white;
     border-radius: 2px;
     transition: 0.2s ease-in-out;
+    display: flex;
 
     aside {
       font-size: 0.8em;
