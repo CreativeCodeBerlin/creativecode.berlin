@@ -1,3 +1,5 @@
+![Creative Code Berlin Logo](https://creativecode.berlin/logo.svg)
+
 # Creative Code Berlin Website
 
 
