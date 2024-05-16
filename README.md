@@ -6,6 +6,11 @@
 Welcome to the Creative Code Berlin website source code, you can visit our website [creativecode.berlin](http://creativecode.berlin)
 
 
+## Adding Artworks
+
+Add the generated JSON generated to the [project.js file](/assets/projects.js)
+
+
 ## Development Instructions
 
 
