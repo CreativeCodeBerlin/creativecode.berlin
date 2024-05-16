@@ -55,4 +55,11 @@ export default [
     color: "black",
     scale: "1",
   },
+  {
+    "url": "https://gfx.aimparency.org/eyesoup-no-pose/",
+    "author": "Felix Niemeyer",
+    "author_url": "https://www.instagram.com/fairlix/",
+    "color": "black",
+    "scale": "1"
+  },
 ];
