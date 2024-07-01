@@ -13,6 +13,10 @@
                         href="mailto:team@creativecode.berlin">team@creativecode.berlin</a>.
                 </p>
 
+                <p>
+                    This page is interactive, please use it to test if your submission works within our website.
+                </p>
+
                 <label for="url">Artwork URL</label>
                 <input type="text" id="url" name="url" v-model="url" placeholder="URL" />
 
