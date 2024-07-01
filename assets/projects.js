@@ -62,4 +62,11 @@ export default [
     "color": "black",
     "scale": "1"
   },
+  {
+    "url": "https://www.shadertoy.com/embed/lX3XWl?gui=false&paused=false&muted=true",
+    "author": "Matthias Meissen",
+    "author_url": "https://www.instagram.com/matthiasmeissen/",
+    "color": "black",
+    "scale": "1"
+  }
 ];
