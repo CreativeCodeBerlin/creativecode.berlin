@@ -56,11 +56,25 @@ export default [
     scale: "1",
   },
   {
-    "url": "https://gfx.aimparency.org/eyesoup-no-pose/",
-    "author": "Felix Niemeyer",
-    "author_url": "https://www.instagram.com/fairlix/",
-    "color": "black",
-    "scale": "1"
+    url: "https://gfx.aimparency.org/eyesoup-no-pose/",
+    author: "Felix Niemeyer",
+    author_url: "https://www.instagram.com/fairlix/",
+    color: "black",
+    scale: "1"
+  },
+  {
+    url: "https://soft-khapse-0c54d2.netlify.app/red-boids/",
+    author: "Dirk Lankamp / der_visualist",
+    author_url: "https://dirk-lankamp.com",
+    color: "white",
+    scale: "1.01"
+  },
+  {
+    url: "https://soft-khapse-0c54d2.netlify.app/white-bubbles/",
+    author: "Dirk Lankamp / der_visualist",
+    author_url: "https://dirk-lankamp.com",
+    color: "white",
+    scale: "1.01"
   },
   {
     "url": "https://www.shadertoy.com/embed/lX3XWl?gui=false&paused=false&muted=true",
