@@ -173,6 +173,8 @@ header {
 }
 
 .project {
+  min-height: 100vh;
+  
   .credits {
     font-size: 1rem;
     padding: var(--pad);
