@@ -127,6 +127,7 @@ a {
 .app {
   position: relative;
   z-index: 0;
+  min-height: 100vh;
 
   &.black {
     --foreground: white;
@@ -173,7 +174,6 @@ header {
 }
 
 .project {
-  min-height: 100vh;
   
   .credits {
     font-size: 1rem;
