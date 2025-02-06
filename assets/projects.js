@@ -32,7 +32,7 @@ export default [
     "author": "aBe",
     "author_url": "https://hamoid.com",
     "color": "black",
-    "scale": "1",
+    "scale": "1.05",
   },
   {
     "url": "https://cables.gl/view/y2j30p",
@@ -74,7 +74,7 @@ export default [
     "author": "Matthias Meissen",
     "author_url": "https://www.instagram.com/matthiasmeissen/",
     "color": "black",
-    "scale": "1"
+    "scale": "1.05"
   },
   {
     "url": "https://soft-khapse-0c54d2.netlify.app/white-bubbles/",
