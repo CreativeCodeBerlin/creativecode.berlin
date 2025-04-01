@@ -25,9 +25,9 @@ export default [
     target: "https://funprogramming.org/pad/p/ccjam",
   },
   {
-    title: "Twitter",
-    path: "/twitter",
-    target: "https://twitter.com/CreativeCodeBLN",
+    title: "Mastodon",
+    path: "/mastodon",
+    target: "https://genart.social/@creativeCodeBLN",
   },
   {
     title: "Chat",
