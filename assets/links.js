@@ -30,11 +30,6 @@ export default [
     target: "https://genart.social/@creativeCodeBLN",
   },
   {
-    title: "Twitter",
-    path: "/twitter",
-    target: "https://twitter.com/CreativeCodeBLN",
-  },
-  {
     title: "Chat",
     path: "/chat",
     target: "https://funprogramming.org/chat",
