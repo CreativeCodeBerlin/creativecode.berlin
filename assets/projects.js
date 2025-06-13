@@ -28,7 +28,7 @@ export default [
     "scale": "1.75",
   },
   {
-    "url": "https://www.shadertoy.com/embed/XlSBDy?gui=false&t=10&paused=false&muted=true",
+    "url": "https://www.shadertoy.com/embed/tfVXz1?gui=false&t=10&paused=false&muted=true",
     "author": "aBe",
     "author_url": "https://hamoid.com",
     "color": "black",
