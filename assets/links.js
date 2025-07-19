@@ -37,7 +37,7 @@ export default [
   {
     title: "Discord",
     path: "/discord",
-    target: "https://discord.gg/EnqmrU9",
+    target: "https://discord.gg/CwNUGu5",
   },
   {
     title: "Telegram",
