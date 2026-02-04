@@ -96,5 +96,12 @@ export default [
     "author_url": "https://abd.ooo/90/",
     "color": "black",
     "scale": "1"
+  },
+  {
+    "url": "https://gfx.aimparency.org/greetings/",
+    "author": "fairlix",
+    "author_url": "https://avonx.space/",
+    "color": "black",
+    "scale": "1"
   }
 ];
