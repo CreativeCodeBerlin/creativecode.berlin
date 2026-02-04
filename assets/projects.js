@@ -28,11 +28,11 @@ export default [
     "scale": "1.75",
   },
   {
-    "url": "https://www.shadertoy.com/embed/tfVXz1?gui=false&t=10&paused=false&muted=true",
+    "url": "https://hamoid.com/static/code/shadertoy/shadertoy-tfVXz1.html",
     "author": "aBe",
     "author_url": "https://hamoid.com",
     "color": "black",
-    "scale": "1.05",
+    "scale": "1",
   },
   {
     "url": "https://cables.gl/view/y2j30p",
