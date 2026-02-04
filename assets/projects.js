@@ -28,11 +28,11 @@ export default [
     "scale": "1.75",
   },
   {
-    "url": "https://www.shadertoy.com/embed/tfVXz1?gui=false&t=10&paused=false&muted=true",
+    "url": "https://hamoid.com/static/code/shadertoy/shadertoy-tfVXz1.html",
     "author": "aBe",
     "author_url": "https://hamoid.com",
     "color": "black",
-    "scale": "1.05",
+    "scale": "1",
   },
   {
     "url": "https://cables.gl/view/y2j30p",
@@ -94,6 +94,13 @@ export default [
     "url": "https://abd.ooo/kaleidoscope/",
     "author": "Abdo",
     "author_url": "https://abd.ooo/90/",
+    "color": "black",
+    "scale": "1"
+  },
+  {
+    "url": "https://gfx.aimparency.org/greetings/",
+    "author": "fairlix",
+    "author_url": "https://avonx.space/",
     "color": "black",
     "scale": "1"
   }
