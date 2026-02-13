@@ -15,7 +15,7 @@
     "nuxt": "^3.16.0"
   },
   "dependencies": {
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "sass": "^1.65.1"
   }
 }
