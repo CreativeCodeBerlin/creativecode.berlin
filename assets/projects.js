@@ -1,6 +1,6 @@
 export default [
   {
-    "url": "https://creativecode.berlin/shadertoys/?shader=wsB3Rt",
+    "url": "/shadertoys/?shader=wsB3Rt",
     "author": "Kazik",
     "author_url": "https://xemantic.com/",
     "color": "black",
@@ -18,17 +18,17 @@ export default [
     "author": "Deniz Biçer",
     "author_url": "https://instagram.com/ojelibalon",
     "color": "black",
-    "scale": "1.85",
+    "scale": "2.0",
   },
   {
-    "url": "https://openprocessing.org/sketch/886902/embed/",
+    "url": "/projects/openprocessing-886902/",
     "author": "Boy d'Hont",
     "author_url": "https://bdhont.net/",
     "color": "white",
     "scale": "1.75",
   },
   {
-    "url": "https://creativecode.berlin/shadertoys/?shader=tfVXz1",
+    "url": "/shadertoys/?shader=tfVXz1",
     "author": "aBe",
     "author_url": "https://hamoid.com",
     "color": "black",
@@ -42,7 +42,7 @@ export default [
     "scale": "1",
   },
   {
-    "url": "https://creativecode.berlin/shadertoys/?shader=3slGRH",
+    "url": "/shadertoys/?shader=3slGRH",
     "author": "Kazik",
     "author_url": "https://xemantic.com/",
     "color": "black",
@@ -70,7 +70,7 @@ export default [
     "scale": "1"
   },
   {
-    "url": "https://creativecode.berlin/shadertoys/?shader=lX3XWl",
+    "url": "/shadertoys/?shader=lX3XWl",
     "author": "Matthias Meissen",
     "author_url": "https://www.instagram.com/matthiasmeissen/",
     "color": "black",
