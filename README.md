@@ -8,7 +8,8 @@ Welcome to the Creative Code Berlin website source code, you can visit our websi
 
 ## Adding Artworks
 
-Add the generated JSON generated to the [project.js file](/assets/projects.js)
+Add the generated JSON generated to the [project.js file](/assets/projects.js).  
+We must host ShaderToy sketches ourselves since 2026. [Here's how to do it](docs/shadertoy.md).
 
 
 ## Development Instructions

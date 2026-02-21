@@ -1,0 +1,1320 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+  <title>Embed - Shadertoy BETA</title>
+  <meta charset="utf-8" />
+  <meta name="Keywords" content="shadertoy, shader toy, quilez, inigo, jeremias, pol, fractals, demoscene, computer graphics, mathematics, rendering, demo, 3D, realtime, shader, raytracing, raymarching, webgl, glsl" />
+  <meta name="Description" content="Build shaders, share them, and learn from the best community." />
+  <meta name="Author" content="Beautypi" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>*
+  {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #404040;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background: #909090;
+    border-radius: 0ex;
+  }
+
+  ::-webkit-scrollbar-corner
+  {
+    background: #000;
+  }
+
+  ::-webkit-input-placeholder
+  {
+    font-style:italic;
+  }
+  input:-moz-placeholder, textarea:-moz-placeholder
+  {
+    font-style:italic;
+  }
+  input.placeholder-text, textarea.placeholder-text
+  {
+    font-style:italic;
+  }
+
+  pre
+  {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+  }
+
+  @font-face
+  {
+    font-family: Lobster;
+    /*src: url("/img/lobster.otf") format("opentype");*/
+  }
+
+  div#centerScreen
+  {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+  }
+
+  a.headerLinks:hover
+  {
+    background-color:#505050;
+    color : #ff8020;
+  }
+
+  body
+  {
+    color: #000000;
+    font-size:12px;
+    font-style:normal;
+    font-family:Tahoma,Arial;
+    background-repeat: no-repeat;
+  //background-attachment: fixed;
+    padding:0px;
+    margin:0px;
+    text-align: left;
+    background-color: #d0d0d0;
+    background-repeat: repeat;
+    user-select: text;
+  }
+
+  a,
+  a:hover,
+  a:visited
+  {
+    color : inherit;
+  }
+
+  div#content {
+    width: 95%;
+    overflow: hidden;
+    margin: auto;
+    padding: 0px;
+    min-height: calc(100vh - 80px);
+  }
+
+
+  .notificationCount
+  {
+    background-color:#ff0000;
+    padding-left:3px;
+    padding-right:1px;
+    padding-top:1px;
+    padding-bottom:1px;
+  }
+
+  div#header
+  {
+    background-color: #404040;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    flex-direction:row;
+  }
+
+  #headerBlock1
+  {
+    width: 50%;
+    display:flex;
+    align-items:center;
+  }
+
+  a#headerTitle
+  {
+    font-size: 2.25em;
+    font-family: Lobster,Tahoma,Arial;
+    text-decoration: none;
+    padding-left:32px;
+    padding-right:32px;
+  }
+
+  #headerSearch
+  {
+    display: inline-block;
+    color: #000000;
+    width: 300px;
+  }
+
+  input[type=search]#mySearch
+  {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid black;
+    padding:12px;
+  }
+
+  #headerBlock2
+  {
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  a#headerTitle:hover
+  {
+    color : #ff8020;
+  }
+
+  a.headerLinks
+  {
+    font-weight: bold;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin:0px;
+    text-decoration: none;
+    transition: background-color 0.15s linear, color 0.15s linear;
+  }
+
+  #footer
+  {
+    background-color: rgba(64,64,64,0.25);
+    color: #000000;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #footer div
+  {
+    padding-top:10px;
+    padding-bottom:0px;
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  #footer div ul
+  {
+    margin-left:0px;
+    padding-left:16px;
+  }
+
+  #footer div ul li
+  {
+    padding-top:6px;
+  }
+
+  a.regular
+  {
+    font-weight:bold;
+    text-decoration:none
+  }
+
+  a.regular:hover
+  {
+    color : #ff8020;
+  }
+
+  a.user
+  {
+    font-weight:bold;
+    text-decoration:none;
+  }
+
+  a.user:hover
+  {
+    color : #ff8020;
+    text-decoration: underline;
+  }
+
+  .uiButton
+  {
+    border: none;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .uiButton:hover
+  {
+    box-shadow: inset 0px 0px 1px 1px #808080, 0px 0px 1px 1px #808080;
+  }
+
+  .uiDivBUtton
+  {
+    cursor:pointer;
+  }
+
+  .uiDivBUtton:hover
+  {
+    color: #ffffff;
+  }
+
+
+  .dialog
+  {
+    display: block;
+    background-color: #e0e0e0;
+    color: #000000;
+    border:1px solid #000;
+    padding:0px;
+    margin:0px;
+    text-align:left;
+    border-radius: 4px;
+    box-shadow:4px 4px 6px 0px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index:1000;
+    visibility: hidden;
+    opacity:0;
+    -moz-transition: opacity 0.25s linear,visibility 0.25s linear;
+    -webkit-transition: opacity 0.25s linear,visibility 0.25s linear;
+    transition: opacity 0.25s linear,visibility 0.25s linear;
+  }
+
+  .dialogHeader
+  {
+    left:0px;
+    top: 0px;
+    width:100%;
+    height:32px;
+    position: absolute;
+    background-color: #808080;
+    cursor:move;
+  }
+
+  .dialogTitle
+  {
+    left: 12px;
+    top: 4px;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    color:#000000;
+    font-size:1.5em;
+    text-align: left;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+  }
+
+  .dialogOverlay
+  {
+    z-index:1000;
+
+    visibility: hidden;
+    opacity:0;
+    -moz-transition: opacity 0.25s linear,visibility 0.25s linear;
+    -webkit-transition: opacity 0.25s linear,visibility 0.25s linear;
+    transition: opacity 0.25s linear,visibility 0.25s linear;
+
+    left:0px;
+    top:0px;
+    padding:0px;
+    margin:0px;
+    width:100%;
+    height:100%;
+    position:absolute;
+
+    background-color:rgba(0,0,0,.4);
+  }
+
+  .viewsIcon, .likesIcon
+  {
+    border: none;
+    outline: none;
+    display:inline-block;
+    background-repeat:no-repeat;
+    top:0px;
+    left:0px;
+    padding:0px;
+    padding-right: 2px;
+    margin:0px;
+    position:relative;
+  }
+
+  .userPictureSmall
+  {
+    background-color:#808080;
+    border: 1px solid #000000;
+    width:32px;
+    height:32px;
+  }
+
+  .dialogCloseButton
+  {
+    right:8px;
+    top: 4px;
+    width:22px;
+    height:22px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .dialogCloseButton:hover
+  {
+    box-shadow: inset 0px 0px 4px 2px #ffffff, 0px 0px 4px 2px #ffffff;
+  }
+
+  .dialogContentButtons
+  {
+    padding:0;
+    border:0;
+    text-align: justify;
+    left: 24px;
+    bottom:40px;
+    position:absolute;
+  }
+
+  .dialogButton
+  {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-bottom:5px;
+    padding-top:4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left:4px;
+    margin-right:4px;
+    text-decoration: none;
+    color:#000000;
+    width: 80px;
+    -moz-transition:    background-color 0.15s linear, color 0.15s linear;
+    -webkit-transition: background-color 0.15s linear, color 0.15s linear;
+    transition:         background-color 0.15s linear, color 0.15s linear;
+  }
+
+  .dialogButton:hover
+  {
+    background-color:#808080;
+    color : #ff8020;
+  }
+
+  .dialogCloseButton:hover
+  {
+    box-shadow: inset 0px 0px 4px 2px #ffffff, 0px 0px 4px 2px #ffffff;
+  }
+
+  .dialogContent
+  {
+    color: inherit;
+    overflow: auto;
+    width:100%;
+    height:100%;
+    left: 0px;
+    top: 32px;
+    position:absolute
+  }
+
+  .dialogContentBody
+  {
+    color: inherit;
+    width:100%;
+    height:auto;
+    padding-top:24px;
+    padding-bottom:24px;
+    padding-left:24px;
+    padding-right:24px;
+    text-align: left;
+  }
+
+  .formButton
+  {
+    font-weight:bold;
+    color:#ffffff;
+    border:none;
+    text-align:center;
+    background-color:#808080;
+    border-radius: 4px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:4px;
+    padding-bottom:4px;
+    cursor:pointer;
+    min-width:80px;
+  }
+  .formInput {
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 4px;
+    border: none;
+  }
+  .formButton:hover {
+    background-color: #e0e0e0;
+  }
+  .formButton:disabled
+  {
+    color:#b0b0b0;
+    background-color:#808080;
+  }
+
+  .formButtonSmall
+  {
+    color:#ffffff;
+    border:none;
+    text-align:center;
+    background-color:#808080;
+    border-radius: 4px;
+    padding-left:2px;
+    padding-right:2px;
+    padding-top:2px;
+    padding-bottom:2px;
+    cursor:pointer;
+    min-width:40px;
+  }
+
+  .formButtonSmall:hover
+  {
+    background-color: #e0e0e0;
+  }
+
+  .formButtonSmall:disabled
+  {
+    color:#b0b0b0;
+    background-color:#808080;
+  }
+
+  .formButtonSmall.disabled2,
+  .formButton.disabled2 { color:#b0b0b0; background-color:#808080; pointer-events: none; }
+
+  .inputForm
+  {
+    padding-left:2%;
+    padding-right:2%;
+    resize: none;
+    text-align: left;
+    background-color:#e0e0e0;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    color:inherit;
+  }
+
+  .inputForm:focus
+  {
+    border: 1px solid #AFCDD8;
+    background-color: #EBF2F4;
+  }
+
+  .transparentPannel
+  {
+    background-color:rgba(64,64,64,0.1);
+    padding:16px;
+  }
+
+  .comment, .commentSelf, .commentNew
+  {
+    border-radius: 4px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 32px auto 8px;
+    grid-template-rows: 1fr;
+    grid-gap:8px;
+  }
+
+  .comment:nth-child(even)
+  {
+    background-color: rgba(64,64,64,0.1);
+  }
+
+  .comment:nth-child(odd)
+  {
+    background-color: rgba(128,128,128,0.1);
+  }
+
+  .commentSelf
+  {
+    background-color: rgba(240,160,64,0.1);
+  }
+
+  .commentNew
+  {
+    padding-right: 0px;
+    grid-template-columns: 40px auto;
+  }
+
+  .commentContent
+  {
+    vertical-align: top;
+    text-align: left;
+    word-break: break-all;
+    word-break: break-word;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+  }
+
+
+  /* ----------------------- media resolutions ------------------------ */
+
+  @media screen and (max-width:799px)
+  {
+    div#header {flex-direction:column; }
+    #headerBlock1 { width:100%; }
+    #headerBlock2 { width:100%; justify-content: space-around;}
+    div#headerSearch {width:200px;}
+    input#mySearch { width:200px; left:21px; height:22px; border-radius:6px; padding-left:8px; padding-right:8px; }
+    .previewText { width:130px; }
+    .transparentPannel { padding:10px; }
+  }
+
+  @media screen and (min-width:800px) and (max-width:1279px)
+  {
+    body { font-size: 9px; }
+    div#headerSearch {width: 250px;}
+    input#mySearch { width:250px; left:21px; height:22px; border-radius:6px; padding-left:8px; padding-right:8px; }
+    .previewText { width:130px; }
+    .transparentPannel { padding:11px; }
+  }
+
+  @media screen and (min-width:1280px) and (max-width:1439px)
+  {
+    body { font-size: 10px; }
+    div#headerSearch {width: 300px;}
+    input#mySearch { width:300px; left:21px; height:22px; border-radius:6px; padding-left:8px; padding-right:8px; }
+    .dialogHeader { height:28px; }
+    .previewText { width:180px; }
+    .transparentPannel { padding:12px; }
+  }
+
+  @media screen and (min-width:1440px) and (max-width:1919px)
+  {
+    div#headerSearch {width: 300px;}
+    input#mySearch { width:300px; left:21px; height:22px; border-radius:6px; padding-left:8px; padding-right:8px; }
+    .dialogHeader { height:28px; }
+    .previewText { width:180px; }
+    .transparentPannel { padding:12px; }
+  }
+
+  @media screen and (min-width:1920px) and (max-width:2559px)
+  {
+    div#headerSearch {width: 300px;}
+    input#mySearch { width:300px; left:21px; height:22px; border-radius:6px; padding-left:8px; padding-right:8px; }
+    .dialogHeader { height:32px; }
+    .previewText { width:220px; }
+    .transparentPannel { padding:16px; }
+  }
+
+  @media screen and (min-width:2560px)
+  {
+    div#headerSearch {width: 300px;}
+    input#mySearch { width:300px; left:21px; height:22px; border-radius:6px; padding-left:8px; padding-right:8px; }
+    .dialogHeader { height:32px; }
+    .previewText { width:220px; }
+    .transparentPannel { padding:16px; }
+  }
+  body
+  {
+    background-image: url("/img/themes/classic/background.jpg");
+  }
+  </style>
+
+  <style>
+    body
+    {
+      background-color: #000000;
+      color: #c0c0c0;
+      font-size:12px;
+      font-style:normal;
+      font-family:Tahoma,Arial;
+      top:0px;
+      left:0px;
+      width:100%;
+      height:100%;
+      padding:0;
+      margin:0;
+      overflow:hidden;
+      position:absolute;
+      user-select: none;
+      -moz-user-select: -moz-none;
+      -webkit-user-select: none;
+    }
+
+    div#player
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      padding:0;
+      margin:0;
+    }
+
+    div#playerInteraction
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      padding:0;
+      margin:0;
+    }
+
+    .playerCanvas
+    {
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    div#noWebGL
+    {
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      position: absolute;
+      border: 0px;
+      border-radius: 4px 4px 0px 0px;
+      background-color:#000000;
+      visibility: hidden;
+    }
+
+    img#noWebGL_ShaderImage
+    {
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: 0px;
+      border-radius: 4px 4px 0px 0px;
+    }
+
+    span#noWebGL_Text
+    {
+      left:8px;
+      font-size: 1.5em;
+      border: 0px;
+      color:#ff0000;
+      position: absolute;
+    }
+
+    div#playerBar
+    {
+      left: 0px;
+      bottom: 0px;
+      position: absolute;
+      width: 100%;
+      height: 30px;
+      background-color:rgba(0,0,0,0.8);
+      margin: 0px;
+      padding: 0px;
+
+      transition: bottom 1s;
+      -webkit-transition: bottom 1s; /* Safari */
+    }
+
+    div#playerBar.isVisible
+    {
+      bottom:0px;
+    }
+
+    div#playerBar.isNotVisible
+    {
+      bottom:-31px;
+    }
+
+    .myFull
+    {
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .playerCanvas_full-screen,
+    .playerCanvas:full-screen,
+    .playerCanvas:fullscreen,
+    .playerCanvas:-webkit-full-screen,
+    .playerCanvas:-moz-full-screen
+    {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+
+    div#shaderInfo
+    {
+      background-color:rgba(0,0,0,0.8);
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      margin: 0px;
+      padding: 0px;
+
+      transition: top 1s;
+      -webkit-transition: top 1s; /* Safari */
+    }
+
+    div#shaderInfo.isVisible
+    {
+      top:0px;
+    }
+    div#shaderInfo.isNotVisible
+    {
+      top:-31px;
+    }
+
+    a.shaderTitle
+    {
+      font-size:18px;
+      font-style:normal;
+      font-weight:bold;
+      text-align: left;
+      color: #c0c0c0;
+      text-decoration: none;
+      margin-left:6px;
+      margin-right:6px;
+    }
+
+    a.shaderTitle:hover
+    {
+      color : #ff8020;
+    }
+
+
+    div#shaderStats
+    {
+      top: 8px;
+      right: 4px;
+      position: absolute;
+      padding-left:0;
+      padding-right:0;
+      margin-left:0;
+      margin-right:0;
+    }
+
+    div#shaderLike
+    {
+      left: 0px;
+      top: 150px;
+      position: absolute;
+    }
+
+    a.shadertoyLink
+    {
+      color:#c0c0c0;
+      font-size:16px;
+      font-style:normal;
+      font-weight:normal;
+      font-family:Lobster,Tahoma,Arial;
+      text-align: left;
+      top: 5px;
+      right: 6px;
+      position: absolute;
+      padding-left:0;
+      padding-right:0;
+      margin-left:0;
+      margin-right:0;
+      text-decoration:none;
+
+      user-select: text;
+      -moz-user-select: -moz-text;
+      -webkit-user-select: text;
+    }
+    a.shadertoyLink:hover
+    {
+      color : #ff8020;
+    }
+  </style>
+
+  <script>var gShaderID="wsB3Rt";var gInvisIfFail=null;var gTime="10";var gShowGui=false;var gPaused=false;var gMuted=true;</script>
+
+  <script src="piLibs.js?v=86"></script>
+  <script src="effect.js?v=86"></script>
+  <script>"use strict"
+
+  const kMaxCompileTime = 10.0;
+
+  function iReportCrash(shaderID)
+  {
+    let req = new XMLHttpRequest();
+    req.onload = function ()
+    {
+      let jsn = req.response;
+      if (jsn === null) return;
+      if (jsn.result === 0)
+      {
+        // yep
+      }
+    };
+    req.open("POST", "/shadertoy", true);
+    req.responseType = "json";
+    req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    req.send( "s=" + shaderID + "&r=2" );
+  }
+  </script>
+  <script>"use strict";
+
+  class SoundCloud
+  {
+    resolve(url, callback, errcallback)
+    {
+      var url2 = "surl=" + url;
+      var mHttpReq = new XMLHttpRequest();
+      mHttpReq.open( "POST", "/shadertoy", true );
+      mHttpReq.responseType = "json";
+      mHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      mHttpReq.onload = function()
+      {
+        var jsn = mHttpReq.response;
+        if( jsn===null ) errcallback(0);
+        if( jsn.result!==0 )
+        {
+          callback(JSON.parse(jsn.soundcloud));
+        } else {
+          errcallback(0);
+        }
+      };
+      mHttpReq.onerror = function()
+      {
+        errcallback(0);
+      };
+      mHttpReq.send( url2 );
+    }
+  }
+
+  const SC = new SoundCloud();
+  </script>
+  <script>"use strict"
+
+  var gShaderToy = null;
+
+  function ShaderToy( parentElement )
+  {
+    if( parentElement===null ) return;
+
+    this.mAudioContext = null;
+    this.mCreated = false;
+    this.mHttpReq = null;
+    this.mEffect = null;
+    this.mTo = null;
+    this.mTOffset = gTime * 1000;
+    this.mCanvas = null;
+    this.mFpsFrame = 0;
+    this.mFpsTo = null;
+    this.mIsPaused = gPaused;
+    this.mForceFrame = true;
+    this.mInfo = null;
+    this.mCode = null;
+
+    this.mCanvas = document.getElementById("demogl");
+    this.mCanvas.tabIndex = "0";
+
+    var ww = parentElement.offsetWidth;
+    var hh = parentElement.offsetHeight;
+
+    var me = this;
+    this.mCanvas.width  = ww;
+    this.mCanvas.height = hh;
+
+    this.mHttpReq = new XMLHttpRequest();
+    this.mTo = getRealTime();
+    this.mTf = this.mTOffset;
+    this.mFpsTo = this.mTo;
+    this.mMouseIsDown = false;
+    this.mMouseOriX = 0;
+    this.mMouseOriY = 0;
+    this.mMousePosX = 0;
+    this.mMousePosY = 0;
+
+
+    // --- audio context ---------------------
+
+    this.mAudioContext = piCreateAudioContext();
+
+    if( this.mAudioContext==null )
+    {
+      //alert( "no audio!" );
+    }
+
+    this.mCanvas.onmousedown = function(ev)
+    {
+      var pos = piGetCoords( me.mCanvas );
+      me.mMouseOriX =                     (ev.pageX - pos.mX)*me.mCanvas.width/me.mCanvas.offsetWidth;
+      me.mMouseOriY = me.mCanvas.height - (ev.pageY - pos.mY)*me.mCanvas.height/me.mCanvas.offsetHeight;
+      me.mMousePosX = me.mMouseOriX;
+      me.mMousePosY = me.mMouseOriY;
+      me.mMouseIsDown = true;
+      if( me.mIsPaused ) me.mForceFrame = true;
+    }
+    this.mCanvas.onmousemove = function(ev)
+    {
+      if( me.mMouseIsDown )
+      {
+        var pos = piGetCoords( me.mCanvas );
+        me.mMousePosX =                     (ev.pageX - pos.mX)*me.mCanvas.width/me.mCanvas.offsetWidth;
+        me.mMousePosY = me.mCanvas.height - (ev.pageY - pos.mY)*me.mCanvas.height/me.mCanvas.offsetHeight;
+        if( me.mIsPaused ) me.mForceFrame = true;
+      }
+    }
+    this.mCanvas.onmouseup = function(ev)
+    {
+      me.mMouseIsDown = false;
+      me.mMouseOriX = -Math.abs( me.mMouseOriX );
+      me.mMouseOriY = -Math.abs( me.mMouseOriY );
+      if( me.mIsPaused ) me.mForceFrame = true;
+    }
+
+    this.mCanvas.onkeydown = function(ev)
+    {
+      me.mEffect.SetKeyDown( 0, ev.keyCode );
+      if( me.mIsPaused ) me.mForceFrame = true;
+    }
+    this.mCanvas.onkeyup = function(ev)
+    {
+      me.mEffect.SetKeyUp( 0, ev.keyCode );
+      if( me.mIsPaused ) me.mForceFrame = true;
+    }
+
+    document.getElementById("myResetButton").onclick = function( ev )
+    {
+      me.resetTime();
+    }
+    document.getElementById("myPauseButton").onclick = function( ev )
+    {
+      me.pauseTime();
+    }
+
+    this.mCanvas.ondblclick = function( ev )
+    {
+      if( piIsFullScreen()==false )
+      {
+        piRequestFullScreen( me.mCanvas );
+        me.mCanvas.focus(); // put mouse/keyboard focus on canvas
+      }
+      else
+      {
+        piExitFullScreen();
+      }
+    }
+
+    document.getElementById("myFullScreen").onclick = function( ev )
+    {
+      piRequestFullScreen( me.mCanvas );
+      me.mCanvas.focus(); // put mouse/keyboard focus on canvas
+    }
+
+    var resizeCB = function (xres, yres) { me.mForceFrame = true; };
+    var crashCB = function () { /*iReportCrash(gShaderID);*/ };
+    this.mEffect = new Effect(null, this.mAudioContext, this.mCanvas, this.RefreshTexturThumbail, this, gMuted, false, resizeCB, crashCB );
+    this.mCreated = true;
+
+  }
+
+  ShaderToy.prototype.startRendering = function()
+  {
+    var me = this;
+
+    function renderLoop2()
+    {
+      requestAnimFrame( renderLoop2 );
+
+      if( me.mIsPaused && !me.mForceFrame )
+      {
+        me.mEffect.UpdateInputs( 0, false );
+        return;
+      }
+
+      me.mForceFrame = false;
+      var time = getRealTime();
+      var ltime = me.mTOffset + time - me.mTo;
+
+      if( me.mIsPaused ) ltime = me.mTf; else me.mTf = ltime;
+
+      var dtime = 1000.0 / 60.0;
+
+      me.mEffect.Paint(ltime/1000.0, dtime/1000.0, 60, me.mMouseOriX, me.mMouseOriY, me.mMousePosX, me.mMousePosY, me.mIsPaused );
+
+      me.mFpsFrame++;
+
+      document.getElementById("myTime").textContent = (ltime/1000.0).toFixed(2);
+      if( (time-me.mFpsTo)>1000 )
+      {
+        var ffps = 1000.0 * me.mFpsFrame / (time-me.mFpsTo);
+        document.getElementById("myFramerate").textContent = ffps.toFixed(1) + " fps";
+        me.mFpsFrame = 0;
+        me.mFpsTo = time;
+      }
+    }
+
+    renderLoop2();
+  }
+
+  //---------------------------------
+
+  ShaderToy.prototype.Stop = function()
+  {
+    this.mIsPaused = true;
+    this.mEffect.StopOutputs();
+  }
+
+  ShaderToy.prototype.pauseTime = function()
+  {
+    var time = getRealTime();
+    if( !this.mIsPaused )
+    {
+      this.Stop();
+    }
+    else
+    {
+      this.mTOffset = this.mTf;
+      this.mTo = time;
+      this.mIsPaused = false;
+      this.mEffect.ResumeOutputs();
+      this.mCanvas.focus(); // put mouse/keyboard focus on canvas
+    }
+  }
+
+  ShaderToy.prototype.resetTime = function()
+  {
+    this.mTOffset = 0;
+    this.mTo = getRealTime();
+    this.mTf = 0;
+    this.mFpsTo = this.mTo;
+    this.mFpsFrame = 0;
+    this.mForceFrame = true;
+    this.mEffect.ResetTime();
+    this.mCanvas.focus(); // put mouse/keyboard focus on canvas
+  }
+
+
+  ShaderToy.prototype.PauseInput = function( id )
+  {
+    return this.mEffect.PauseInput( 0, id );
+  }
+
+  ShaderToy.prototype.MuteInput = function( id )
+  {
+    return this.mEffect.MuteInput( 0, id );
+  }
+
+  ShaderToy.prototype.RewindInput = function( id )
+  {
+    this.mEffect.RewindInput( 0, id );
+    this.mCanvas.focus(); // put mouse/keyboard focus on canvas
+  }
+
+  ShaderToy.prototype.SetTexture = function( slot, url )
+  {
+    this.mEffect.NewTexture( 0, slot, url );
+  }
+
+  ShaderToy.prototype.RefreshTexturThumbail = function( myself, slot, img, forceFrame, gui, guiID, time )
+  {
+    myself.mForceFrame = forceFrame;
+  }
+
+  ShaderToy.prototype.GetTotalCompilationTime = function()
+  {
+    return this.mEffect.GetTotalCompilationTime();
+  }
+
+  ShaderToy.prototype.Load = function( jsn )
+  {
+    try
+    {
+      var res = this.mEffect.Load( jsn, false );
+      this.mCode = res.mShader;
+
+      if( res.mFailed===false )
+      {
+        //this.resetTime();
+        this.mForceFrame = true;
+      }
+
+      this.mInfo = jsn.info;
+
+      return {
+        mFailed: false,
+        mDate        : jsn.info.date,
+        mViewed      : jsn.info.viewed,
+        mName        : jsn.info.name,
+        mUserName    : jsn.info.username,
+        mDescription : jsn.info.description,
+        mLikes       : jsn.info.likes,
+        mPublished   : jsn.info.published,
+        mHasLiked    : jsn.info.hasliked,
+        mTags        : jsn.info.tags };
+
+    }
+    catch( e )
+    {
+      return { mFailed:true };
+    }
+  }
+
+  ShaderToy.prototype.Compile = function (onResolve)
+  {
+    this.mEffect.Compile(true, onResolve);
+  }
+
+  function iCompileAndStart( viewerParent, jsnShader )
+  {
+    gShaderToy = new ShaderToy( viewerParent, null );
+    if( !gShaderToy.mCreated )
+    {
+      if( gInvisIfFail!==null )
+      {
+        var div = document.createElement("img");
+        div.src = gInvisIfFail;
+        var root = document.getElementsByTagName( "body" )[0];
+        root.replaceChild( div, viewerParent );
+      }
+      return;
+    }
+
+    var gRes = gShaderToy.Load(jsnShader[0])
+    if (gRes.mFailed)
+    {
+      gShaderToy.pauseTime();
+      gShaderToy.resetTime();
+    }
+    else
+    {
+      let st = document.getElementById("shaderTitle");
+      let str = "<a class=\"shaderTitle\" target=\"_blank\" href=\"https://www.shadertoy.com/view/" + gShaderID + "\">" + htmlEntities(gRes.mName) + "</a>";
+      str += "<span>by " + htmlEntities(gRes.mUserName) + " in " + piGetTime(gRes.mDate) + "</span>";
+      st.innerHTML = str;
+
+      gShaderToy.Compile( function (worked)
+      {
+        if (!worked) return;
+
+        /*
+        let compilationTime = gShaderToy.GetTotalCompilationTime();
+        if (compilationTime > kMaxCompileTime)
+        {
+            iReportCrash(gShaderID);
+        }*/
+
+        if (gShaderToy.mIsPaused)
+        {
+          gShaderToy.Stop();
+        }
+
+        gShaderToy.startRendering();
+      });
+    }
+
+  }
+
+  function watchInit()
+  {
+    //-- shadertoy --------------------------------------------------------
+    var viewerParent = document.getElementById("player");
+
+    if( gShowGui===false )
+    {
+      document.getElementById('shaderInfo').className='isNotVisible';
+      document.getElementById('playerBar').className='isNotVisible';
+    }
+
+    viewerParent.addEventListener( "mouseover", function(e)
+    {
+      document.getElementById('shaderInfo').className='isVisible';
+      document.getElementById('playerBar').className='isVisible';
+    }, true );
+
+    viewerParent.addEventListener( "mouseout", function(e)
+    {
+      var tt = e.relatedTarget || e.toElement;
+
+      //console.log( "OUT   t: " + e.target.id + "    ct: " + e.currentTarget.id + "    this: " + this.id + "    target: " + ((tt==null)?"none":tt.id) );
+      if( tt!==null ) return;
+
+      document.getElementById('shaderInfo').className='isNotVisible';
+      document.getElementById('playerBar').className='isNotVisible';
+    }, true );
+
+    document.body.addEventListener( "keydown", function(e)
+    {
+      var ele = piGetSourceElement(e)
+      if( e.keyCode===8 && ele===document.body )
+        e.preventDefault();
+    } );
+
+
+    //-- get info --------------------------------------------------------
+
+    const params = new URLSearchParams(window.location.search);
+    const shader = params.get("shader");
+
+    var httpReq = new XMLHttpRequest();
+    httpReq.open("GET", shader + ".json")
+    var str = ""
+    // httpReq.open( "POST", "/shadertoy", true );
+    // httpReq.responseType = "json";
+    // httpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    // var str = "{ \"shaders\" : [\"" + gShaderID + "\"] }";
+    // str = "s=" + encodeURIComponent(str) + "&nt=0&nl=0&np=0";;
+    httpReq.onload = function()
+    {
+      // var jsnShader = httpReq.response;
+      var jsnShader = JSON.parse(httpReq.response)
+      iCompileAndStart(viewerParent,jsnShader);
+    }
+    httpReq.send( str  );
+  }
+  </script>
+</head>
+
+<body onload="watchInit()">
+
+<!-- content ================================================================================== -->
+
+<div id="player">
+  <canvas id="demogl" class="playerCanvas"></canvas>
+  <div id="noWebGL"><img id="noWebGL_ShaderImage"></img><span id="noWebGL_Text">No WebGL available :(</span></div>
+
+  <div id="shaderInfo" style="display: none;">
+    <div   id="shaderTitle"></div>
+    <div   id="shaderStats"></div>
+  </div>
+
+  <div id="playerBar" style="display: none;">
+    <div id="myResetButton" class="uiButton" title="reset time"      style="left: 16px;top:4px;cssFloat:left;"></div>
+    <div id="myPauseButton" class="uiButton" title="pause/resume"    style="left: 44px;top:4px;cssFloat:left;"></div>
+    <span id="myTime"                                                style="left: 88px;top:6px;position:absolute;margin:0px;padding:0px;font:italic normal 14px arial,serif">0</span>
+    <span id="myFramerate"                                           style="left:164px;top:6px;position:absolute;margin:0px;padding:0px;font:italic normal 14px arial,serif">0 fps</span>
+    <a class="shadertoyLink" href="https://www.shadertoy.com" target="_blank">Shadertoy</a>
+    <div id="myFullScreen"  class="uiButton" title="go full screen!" style="right:80px;top:4px;cssFloat:left;);"></div>
+  </div>
+</div>
+</html>
