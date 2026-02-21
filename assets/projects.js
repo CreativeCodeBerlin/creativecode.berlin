@@ -1,6 +1,6 @@
 export default [
   {
-    "url": "https://www.shadertoy.com/embed/wsB3Rt?gui=false&t=10&paused=false&muted=true",
+    "url": "https://creativecode.berlin/shadertoys/?shader=wsB3Rt",
     "author": "Kazik",
     "author_url": "https://xemantic.com/",
     "color": "black",
