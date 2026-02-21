@@ -21,7 +21,7 @@ export default [
     "scale": "1.85",
   },
   {
-    "url": "https://openprocessing.org/sketch/886902/embed/",
+    "url": "https://creativecode.berlin/projects/openprocessing-886902/",
     "author": "Boy d'Hont",
     "author_url": "https://bdhont.net/",
     "color": "white",
