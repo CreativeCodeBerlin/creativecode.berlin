@@ -37,20 +37,12 @@ import links from 'assets/links';
 const projectIndex = useCookie('projectIndex', {
   default: () => Math.floor(Math.random() * projects.length),
 })
-
-
+projectIndex.value += 1
+projectIndex.value %= projects.length
 const project = ref(projects[projectIndex.value])
-provide('project', project)
-onMounted(() => {
-  projectIndex.value += 1
-  projectIndex.value %= projects.length
-  project.value = projects[projectIndex.value]
-  console.log("MOUNTED") // DBG
-})
+//project.value = projects[projectIndex.value]
 
-watch(project, (newVal, oldVal) => {
-  console.log('project changed:', newVal, 'from:', oldVal)
-}) // DBG
+provide('project', project)
 
 const route = useRoute()
 onMounted(() => {
