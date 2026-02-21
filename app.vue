@@ -1,7 +1,8 @@
 <template>
   <div class="app">
     <header>
-      <section class="project">
+      <div ref="projectMount"></div>
+      <section v-if="showProject" class="project">
         <h2 class="credits">
           Background art by
           <template v-if="project.author_url">
@@ -12,8 +13,7 @@
           </template>
         </h2>
         <div class="display">
-          <iframe :style="{ transform: `scale(${project.scale})` }" :src="project.url">
-          </iframe>
+          <iframe :style="{ transform: `scale(${project.scale})` }" :src="project.url" />
         </div>
       </section>
       <svg width="49" height="65" viewBox="0 0 49 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
@@ -34,15 +34,18 @@
 import projects from 'assets/projects';
 import links from 'assets/links';
 
+const showProject = ref(false)
 const projectIndex = useCookie('projectIndex', {
   default: () => Math.floor(Math.random() * projects.length),
 })
-projectIndex.value += 1
-projectIndex.value %= projects.length
 const project = ref(projects[projectIndex.value])
-//project.value = projects[projectIndex.value]
-
 provide('project', project)
+onMounted(() => {
+  projectIndex.value += 1
+  projectIndex.value %= projects.length
+  project.value = projects[projectIndex.value]
+  showProject.value = true
+})
 
 const route = useRoute()
 onMounted(() => {
@@ -125,11 +128,6 @@ a {
   position: relative;
   z-index: 0;
   min-height: 100vh;
-
-  &.black {
-    --foreground: white;
-    --background: black;
-  }
 
   @media screen and (min-width: 800px) {
     display: flex;
