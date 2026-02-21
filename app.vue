@@ -45,7 +45,12 @@ onMounted(() => {
   projectIndex.value += 1
   projectIndex.value %= projects.length
   project.value = projects[projectIndex.value]
+  console.log("MOUNTED") // DBG
 })
+
+watch(project, (newVal, oldVal) => {
+  console.log('project changed:', newVal, 'from:', oldVal)
+}) // DBG
 
 const route = useRoute()
 onMounted(() => {
@@ -72,8 +77,8 @@ useHead(() => ({
 <style lang="scss">
 :root {
   --primary: #cb5955;
-  --foreground: black;
-  --background: white;
+  --foreground: white;
+  --background: black;
 
   &.black {
     --foreground: white;
