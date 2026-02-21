@@ -28,7 +28,7 @@ export default [
     "scale": "1.75",
   },
   {
-    "url": "https://hamoid.com/static/code/shadertoy/shadertoy-tfVXz1.html",
+    "url": "https://creativecode.berlin/shadertoys/?shader=tfVXz1",
     "author": "aBe",
     "author_url": "https://hamoid.com",
     "color": "black",
@@ -42,7 +42,7 @@ export default [
     "scale": "1",
   },
   {
-    "url": "https://www.shadertoy.com/embed/3slGRH?gui=false&t=10&paused=false&muted=true",
+    "url": "https://creativecode.berlin/shadertoys/?shader=3slGRH",
     "author": "Kazik",
     "author_url": "https://xemantic.com/",
     "color": "black",
@@ -70,7 +70,7 @@ export default [
     "scale": "1"
   },
   {
-    "url": "https://www.shadertoy.com/embed/lX3XWl?gui=false&paused=false&muted=true",
+    "url": "https://creativecode.berlin/shadertoys/?shader=lX3XWl",
     "author": "Matthias Meissen",
     "author_url": "https://www.instagram.com/matthiasmeissen/",
     "color": "black",
