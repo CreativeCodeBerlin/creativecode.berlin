@@ -1,3 +1,6 @@
+# Generated files
+public/_redirects
+
 # Nuxt dev/build outputs
 .output
 .data
