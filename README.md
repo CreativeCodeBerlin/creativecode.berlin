@@ -25,7 +25,7 @@ This renders the site locally. You can browse it at `http://localhost:3000`. The
 
 If you want to publish any changes, create a new branch and work on that. Push the branch to GitHub and create a Pull Request (PR).
 
-The Netlify integration will run "checks" in the PR, which include creating a pre-release preview. You can view this at `https://deploy-preview-NNN--vigilant-edison-dfd992.netlify.app`, where NNN is the PR number. Unfortunately this only happens once; if you push additional commits to the PR, the preview is not updated.
+The Netlify integration will run "checks" in the PR, which include creating a pre-release preview. You can view this at `https://deploy-preview-NNN--vigilant-edison-dfd992.netlify.app`, where NNN is the PR number. If you push additional commits to the PR before merging, the checks will re-run and the preview will get updated.
 
 Merging the PR to master deploys the changes on the live website.
 
