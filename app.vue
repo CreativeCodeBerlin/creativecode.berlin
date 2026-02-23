@@ -72,17 +72,17 @@ useHead(() => ({
 <style lang="scss">
 :root {
   --primary: #cb5955;
-  --foreground: blue;
-  --background: red;
+  --foreground: white;
+  --background: black;
 
   &.black {
-    --foreground: blue;
-    --background: red;
+    --foreground: white;
+    --background: black;
   }
 
   &.white {
-    --foreground: blue;
-    --background: red;
+    --foreground: black;
+    --background: white;
   }
 
   --pad: 12px;
