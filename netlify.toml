@@ -1,0 +1,71 @@
+[[redirects]]
+  from = "https://learn.creativecode.berlin/*"
+  to = "https://sableraph.notion.site/Creative-Code-resources-for-beginners-and-beyond-p5-js-edition-38fce7d30b1d41a9a626ab70440f40ca"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://chat.creativecode.berlin/*"
+  to = "https://chat.funprogramming.org/signup_user_complete/?id=3fbmhbdf57ns38erurx3deax9h"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://meetup.creativecode.berlin/*"
+  to = "https://www.meetup.com/creativecodeberlin/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://ccs.creativecode.berlin/*"
+  to = "https://funprogramming.org/pad/p/ccs"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://archive.creativecode.berlin/*"
+  to = "https://creativecodeberlin.github.io/Stammtisch/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://jam.creativecode.berlin/*"
+  to = "https://funprogramming.org/pad/p/ccjam"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://mastodon.creativecode.berlin/*"
+  to = "https://genart.social/@creativeCodeBLN"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://discord.creativecode.berlin/*"
+  to = "https://discord.gg/CwNUGu5"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://telegram.creativecode.berlin/*"
+  to = "https://t.me/creativecodeberlin"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://instagram.creativecode.berlin/*"
+  to = "https://www.instagram.com/creativecodebln/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://github.creativecode.berlin/*"
+  to = "https://github.com/CreativeCodeBerlin"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://codeofconduct.creativecode.berlin/*"
+  to = "https://berlincodeofconduct.org"
+  status = 302
+  force = true
