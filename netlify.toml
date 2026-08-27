@@ -6,8 +6,7 @@
 
 [[redirects]]
   from = "https://chat.creativecode.berlin/*"
-  to = "https://chat.funprogramming.org/signup_user_complete/?
-id=3fbmhbdf57ns38erurx3deax9h"
+  to = "https://chat.funprogramming.org/signup_user_complete/?id=3fbmhbdf57ns38erurx3deax9h"
   status = 302
   force = true
 
