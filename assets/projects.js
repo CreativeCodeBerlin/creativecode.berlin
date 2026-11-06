@@ -56,13 +56,6 @@ export default [
     "scale": "1",
   },
   {
-    "url": "https://soft-khapse-0c54d2.netlify.app/red-boids/",
-    "author": "Dirk Lankamp / der_visualist",
-    "author_url": "https://dirk-lankamp.com",
-    "color": "white",
-    "scale": "1.01"
-  },
-  {
     "url": "https://gfx.aimparency.org/eyesoup-no-pose/",
     "author": "Felix Niemeyer",
     "author_url": "https://www.instagram.com/fairlix/",
@@ -75,13 +68,6 @@ export default [
     "author_url": "https://www.instagram.com/matthiasmeissen/",
     "color": "black",
     "scale": "1.05"
-  },
-  {
-    "url": "https://soft-khapse-0c54d2.netlify.app/white-bubbles/",
-    "author": "Dirk Lankamp / der_visualist",
-    "author_url": "https://dirk-lankamp.com",
-    "color": "white",
-    "scale": "1.01"
   },
   {
     "url":"https://sarahlaplante.com/db-clock/",
